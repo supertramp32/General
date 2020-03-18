@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">XyZ</string>
+
+
+    <string name="open_drawer">Open Navigation Drawer</string>
+    <string name="close_drawer">Close Navigation Drawer</string>
+    <string name="others">Others</string>
+    <string name="home">Home</string>
+    <string name="account">My Account</string>
+    <string name="Orders">My Orders</string>
+    <string name="categories">Categories</string>
+    <string name="wishlist">My Wishlist</string>
+    <string name="cart">Shopping Cart</string>
+    <string name="faq">FAQ</string>
+    <string name="aboutUs">About Us</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="setting">Settings</string>
+    <string name="user">User</string>
+    <string name="userName">Oliver Twist</string>
+    <string name="emailAddress">oliver@gmail.com</string>
+    <string name="invoice">Invoice</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="kartmandus">KartMandus</string>
+    <string name="action">Actions</string>
+    <string name="latest_post">LATEST POSTS</string>
+    <string name="best_selling">BEST SELLING</string>
+    <string name="featured">Featured</string>
+    <string name="deals">DEALS OF THE DAY</string>
+    <string name="description">Description</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="emailText">EMAIL ADDRESS</string>
+    <string name="passwordText">PASSWORD</string>
+    <string name="forgetpassword">Forgot password?</string>
+    <string name="no_account">Don\'t have an account? Sign Up</string>
+    <string name="button_text_checkout">CHECKOUT</string>
+    <string name="fillupText">1</string>
+    <string name="add_review">Add Review</string>
+    <string name="availability_status">Avaiilabilty:</string>
+    <string name="orderHistory">Orders History</string>
+    <string name="Order">Orders</string>
+
+    <string name="label_button_subscribe">subscribe</string>
+    <string name="label_baneshwor">Baneshwor</string>
+    <string name="label_contact_address">Kathmandu,Nepal</string>
+    <string name="label_email">ecommerce@gmail.com</string>
+    <string name="label_phone_number">+977- 980000000</string>
+    <string name="label_contact_name">Name</string>
+    <string name="label_contact_email">Email</string>
+    <string name="label_contact_subject">Subject</string>
+    <string name="label_contact_message">Message</string>
+    <string name="button_send">SEND</string>
+
+    <string name="map_api_key">AIzaSyAGmGXVUE1WGASwkq00a8PohMBKMykpneg</string>
+    <string name="filter">Filter</string>
+    <string name="register">Register</string>
+    <string name="logout">Log Out</string>
+    <string name="shipping_adress">Shipping Adress</string>
+    <string name="checkout">Check Out</string>
+    <string name="place_order">Place Order</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="press_back">Press back again</string>
+
+
+</resources>
