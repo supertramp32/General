@@ -49,4 +49,8 @@
 
 </style>
 
+    <style name="customToolbar">
+        <item name="iconTint">@color/textColor</item>
+    </style>
+
 </resources>

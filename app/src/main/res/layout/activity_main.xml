@@ -155,10 +155,10 @@
 
     <TextView
         android:id="@+id/addProduct"
-        android:layout_width="86dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/layout_margin_small"
-        android:text="About Us"
+        android:text="@string/contact_us"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:visibility="invisible"

@@ -38,5 +38,9 @@ dependencies {
     //circle indicator
     implementation 'me.relex:circleindicator:1.2.2@aar'
 
+    //map
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+
+
 
 }

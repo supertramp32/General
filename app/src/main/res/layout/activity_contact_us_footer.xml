@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            >
+            <EditText
+                android:id="@+id/email_subscribe"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/oval_edit_text"
+                android:gravity="start"
+                android:hint="@string/label_contact_email"
+                android:textColorHint="@color/colorAccent"
+                />
+            <Button
+               android:drawablePadding="10dp"
+                android:background="@drawable/oval_background"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_mail_small"
+                android:text="@string/label_button_subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                />
+
+        </RelativeLayout>

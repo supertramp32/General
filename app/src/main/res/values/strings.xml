@@ -43,7 +43,7 @@
     <string name="label_button_subscribe">subscribe</string>
     <string name="label_baneshwor">Baneshwor</string>
     <string name="label_contact_address">Kathmandu,Nepal</string>
-    <string name="label_email">ecommerce@gmail.com</string>
+    <string name="label_email">xyz@gmail.com</string>
     <string name="label_phone_number">+977- 980000000</string>
     <string name="label_contact_name">Name</string>
     <string name="label_contact_email">Email</string>
@@ -60,6 +60,7 @@
     <string name="place_order">Place Order</string>
     <string name="subtotal">Subtotal</string>
     <string name="press_back">Press back again</string>
+    <string name="contact_us">Contact Us</string>
 
 
 </resources>

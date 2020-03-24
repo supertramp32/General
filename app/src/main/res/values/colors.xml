@@ -3,8 +3,26 @@
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#BDBDBD</color>
     <color name="colorAccent">#64B5F6</color>
+    <color name="textColor">#000000</color>
 
+    <color name="colorBackground">#ffffff</color>
+    <color name="colorFab">#64B5F6</color>
+    <color name="colorCardBackground">#FFFFFF</color>
+    <color name="tabTitleColor">#FFFFFF</color>
 
+    <color name="tabSelectedBackground">#F44336</color>
+
+    <color name="colorEnabled">#0D47A1</color>
+    <color name="colorDisabled">#37474F</color>
+
+    <color name="titleTextColor">#0D47A1</color>
+    <color name="subTitleTextColor">#616161</color>
+
+    <color name="BorderLine">#DCDCDC</color>
+
+    <color name="loginBtnColor">#3D5AFE</color>
+    <color name="rating">#ffd700</color>
+    <color name="positiveResponse">#3bc639</color>
 
 
 </resources>
