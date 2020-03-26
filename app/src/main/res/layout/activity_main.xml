@@ -96,7 +96,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/layout_margin_small"
-        android:text="Introduction"
+        android:text="Intro"
+        android:clickable="true"
         android:visibility="invisible"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
@@ -109,7 +110,7 @@
         android:id="@+id/viewProductsFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="190dp"
+        android:layout_marginBottom="240dp"
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
@@ -123,19 +124,38 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/viewGalleryFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="190dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorAccent"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="mini"
+        android:src="@drawable/ic_gallery"
+        app:layout_constraintLeft_toLeftOf="@id/fabBtn"
+        app:layout_constraintRight_toRightOf="@id/fabBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <TextView
-        android:id="@+id/offerText"
+        android:id="@+id/viewGalleryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/layout_margin_small"
-        android:text="Our Team"
+        android:text="Gallery"
         android:textStyle="bold"
+        android:clickable="true"
         android:textColor="@color/colorPrimary"
         android:visibility="invisible"
         android:textAlignment="center"
-        app:layout_constraintRight_toLeftOf="@+id/addOfferFab"
-        app:layout_constraintTop_toTopOf="@+id/addOfferFab"
-        app:layout_constraintBottom_toBottomOf="@+id/addOfferFab"/>
+        app:layout_constraintRight_toLeftOf="@+id/viewGalleryFab"
+        app:layout_constraintTop_toTopOf="@+id/viewGalleryFab"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGalleryFab"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addOfferFab"
@@ -156,6 +176,22 @@
 
 
     <TextView
+        android:id="@+id/vOfferText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/layout_margin_small"
+        android:text="Our Team"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/addOfferFab"
+        app:layout_constraintTop_toTopOf="@+id/addOfferFab"
+        app:layout_constraintBottom_toBottomOf="@+id/addOfferFab"/>
+
+
+    <TextView
         android:id="@+id/addProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -163,6 +199,7 @@
         android:text="@string/contact_us"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
+        android:clickable="true"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/addproductFab"
         app:layout_constraintRight_toLeftOf="@+id/addproductFab"

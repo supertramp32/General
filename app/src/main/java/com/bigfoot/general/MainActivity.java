@@ -3,6 +3,7 @@ package com.bigfoot.general;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -29,7 +30,7 @@ import me.relex.circleindicator.CircleIndicator;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
 
     ViewPager viewPager;
@@ -46,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
 
 
-    TextView addProduct, addOffer, viewProducts;
-    FloatingActionButton addProductFab, addOfferFab, fab,vProducts;
+    TextView addProduct, addOffer, viewProducts,vGallery;
+    FloatingActionButton addProductFab, addOfferFab, fab,vProducts,galleryFab;
     private Animation fab_open, fab_close, fab_clock, fab_anticlock;
 
     ConstraintLayout coordinatorLayout;
@@ -63,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
         circleIndicator = findViewById(R.id.circleIndicator);
 
         addProduct = findViewById(R.id.addProduct);
-        addOffer = findViewById(R.id.offerText);
+        addOffer = findViewById(R.id.vOfferText);
+
+        galleryFab = findViewById(R.id.viewGalleryFab);
+        vGallery = findViewById(R.id.viewGalleryText);
 
         viewProducts = findViewById(R.id.viewProducts);
         vProducts = findViewById(R.id.viewProductsFab);
@@ -117,32 +121,20 @@ public class MainActivity extends AppCompatActivity {
         initViewModel();
 
 
-        addProductFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
-            }
-        });
+     addProductFab.setOnClickListener(this);
 
 
-        addOfferFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, OurTeamActivity.class));
-
-            }
-        });
+        addOfferFab.setOnClickListener(this);
 
 
-        vProducts.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, GalleryViewActivity.class));
+        galleryFab.setOnClickListener(this);
 
-            }
-        });
-
+        addOffer.setOnClickListener(this);
+        vGallery.setOnClickListener(this);
+        addProduct.setOnClickListener(this);
+        viewProducts.setOnClickListener(this);
     }
+
 
     private void initViewModel() {
 
@@ -206,6 +198,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFab(){
 
+        vGallery.setVisibility(View.INVISIBLE);
+        galleryFab.setVisibility(View.INVISIBLE);
         addOffer.setVisibility(View.INVISIBLE);
         addProduct.setVisibility(View.INVISIBLE);
         viewProducts.setVisibility(View.INVISIBLE);
@@ -213,22 +207,29 @@ public class MainActivity extends AppCompatActivity {
         addProductFab.startAnimation(fab_close);
         vProducts.startAnimation(fab_close);
         fab.startAnimation(fab_anticlock);
+        galleryFab.setAnimation(fab_close);
         addOfferFab.setClickable(false);
+        fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_home));
         addProductFab.setClickable(false);
+
         isOpen = false;
     }
 
 
     public void closeFab(){
 
+        vGallery.setVisibility(VISIBLE);
+        galleryFab.setVisibility(VISIBLE);
         addOffer.setVisibility(VISIBLE);
         addProduct.setVisibility(VISIBLE);
         viewProducts.setVisibility(VISIBLE);
         vProducts.startAnimation(fab_open);
         addOfferFab.startAnimation(fab_open);
         addProductFab.startAnimation(fab_open);
+        galleryFab.startAnimation(fab_open);
         fab.startAnimation(fab_clock);
         addOfferFab.setClickable(true);
+        fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_storage));
         addProductFab.setClickable(true);
         isOpen = true;
 
@@ -266,8 +267,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+
+            case R.id.addOfferFab:
+            case R.id.vOfferText:
+                startActivity(new Intent(MainActivity.this, OurTeamActivity.class));
+                break;
+
+            case R.id.addproductFab:
+            case R.id.addProduct:
+                startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+                break;
+
+            case R.id.viewGalleryFab:
+            case R.id.viewGalleryText:
+                startActivity(new Intent(MainActivity.this, GalleryViewActivity.class));
+                break;
 
 
+            case R.id.viewProductsFab:
+            case R.id.viewProducts:
+                break;
+
+
+        }
+
+    }
 }
 
 
