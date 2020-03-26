@@ -1,6 +1,7 @@
 package com.bigfoot.general.gallery;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bigfoot.general.GalleryFullActivity;
 import com.bigfoot.general.R;
 import com.bumptech.glide.Glide;
 
@@ -71,6 +73,7 @@ public class GalleryViewAdapter extends RecyclerView.Adapter<GalleryViewAdapter.
             galleryDate = itemView.findViewById(R.id.gallerDate);
             singleImage = itemView.findViewById(R.id.gallerySingleImage);
             galleryTitle = itemView.findViewById(R.id.galleryTitle);
+            itemView.setOnClickListener(this);
 
 
         }
@@ -78,6 +81,9 @@ public class GalleryViewAdapter extends RecyclerView.Adapter<GalleryViewAdapter.
         @Override
         public void onClick(View view) {
             int position = getAdapterPosition();
+            Intent intent = new Intent(context, GalleryFullActivity.class);
+            intent.putExtra("pos",position);
+            context.startActivity(intent);
 
         }
     }
