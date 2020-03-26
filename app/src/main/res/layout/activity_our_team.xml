@@ -6,42 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".OurTeamActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarSingle"
         app:layout_constraintTop_toTopOf="parent"
         >
 
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_contact_us"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:navigationIcon="?attr/homeAsUpIndicator"
-            app:theme="@style/customToolbar"
-            app:title="@string/ourTeam"
-            app:titleTextColor="@color/colorAccent" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <View
-            android:id="@+id/shadow_view_contact_us"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/squareTextViewForQuantity"
-            android:background="@drawable/toolbar_shadow"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_contact_us" />
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/backBtn"-->
+<!--                android:src="@drawable/ic_ham"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                />-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/singlePostTypeImage"
+                android:src="@drawable/ic_group"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/singlePostTypeName"
+                android:text="@string/ourTeam"
+                style="@style/TitleText"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="@dimen/layout_margin_small"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
 
 
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways|snap" />
-    </com.google.android.material.appbar.AppBarLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_margin_small"
+        android:id="@+id/view"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSingle"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSingle">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -73,16 +92,14 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamExecutives"
                         android:text="EXECUTIVES:"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
+                        style="@style/TitleText"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         />
 
                     <View
                         android:layout_width="0dp"
-                        android:layout_height="2dp"
+                        android:layout_height="3dp"
                         android:id="@+id/viewO"
                         android:background="@color/colorAccent"
                         app:layout_constraintRight_toRightOf="@id/teamExecutives"
@@ -108,8 +125,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/ceoName"
                         android:text="Mr. X"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
+                        style="@style/DateText"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/teamCeo"
@@ -120,9 +136,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamPosition"
                         android:text="CEO"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/priceText"
-                        android:textColor="@color/colorAccent"
+                        style="@style/DescriptionText"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/ceoName"
@@ -146,9 +160,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/ctoName"
                         android:text="Mr. Y"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
-                        app:layout_constraintRight_toRightOf="@id/teamCto"
+                        style="@style/DateText"
+                         app:layout_constraintRight_toRightOf="@id/teamCto"
                         app:layout_constraintLeft_toLeftOf="@id/teamCto"
                         app:layout_constraintTop_toBottomOf="@id/teamCto"
                         />
@@ -158,9 +171,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamPositionCto"
                         android:text="CTO"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/priceText"
-                        android:textColor="@color/colorAccent"
+                        style="@style/DescriptionText"
                         app:layout_constraintRight_toRightOf="@id/teamCto"
                         app:layout_constraintLeft_toLeftOf="@id/teamCto"
                         app:layout_constraintTop_toBottomOf="@id/ctoName"
@@ -183,9 +194,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/cooName"
                         android:text="Mr. Z"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
-                        app:layout_constraintRight_toRightOf="@id/teamCoo"
+                        style="@style/DateText"
+                         app:layout_constraintRight_toRightOf="@id/teamCoo"
                         app:layout_constraintLeft_toLeftOf="@id/teamCoo"
                         app:layout_constraintTop_toBottomOf="@id/teamCoo"
                         />
@@ -195,9 +205,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamPositionCoo"
                         android:text="COO"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/priceText"
-                        android:textColor="@color/colorAccent"
+                        style="@style/DescriptionText"
                         app:layout_constraintRight_toRightOf="@+id/teamCoo"
                         app:layout_constraintLeft_toLeftOf="@+id/teamCoo"
                         app:layout_constraintTop_toBottomOf="@+id/cooName"
@@ -241,16 +249,14 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamTaskForce"
                         android:text="TASK FORCE:"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
+                        style="@style/TitleText"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         />
 
                     <View
                         android:layout_width="0dp"
-                        android:layout_height="2dp"
+                        android:layout_height="3dp"
                         android:id="@+id/viewOn"
                         android:background="@color/colorAccent"
                         app:layout_constraintRight_toRightOf="@id/teamTaskForce"
@@ -276,9 +282,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/devName"
                         android:text="Mr. A"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
-                        app:layout_constraintRight_toRightOf="@id/teamDeveloper"
+                        style="@style/DateText"
+                         app:layout_constraintRight_toRightOf="@id/teamDeveloper"
                         app:layout_constraintLeft_toLeftOf="@id/teamDeveloper"
                         app:layout_constraintTop_toBottomOf="@id/teamDeveloper"
                         />
@@ -288,9 +293,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamPositionDev"
                         android:text="Developer"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/priceText"
-                        android:textColor="@color/colorAccent"
+                        style="@style/DescriptionText"
                         app:layout_constraintRight_toRightOf="@+id/teamDeveloper"
                         app:layout_constraintLeft_toLeftOf="@id/teamDeveloper"
                         app:layout_constraintTop_toBottomOf="@id/devName"
@@ -313,8 +316,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/desName"
                         android:text="Mr. B"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
+                       style="@style/DateText"
                         app:layout_constraintRight_toRightOf="@id/teamDesigner"
                         app:layout_constraintLeft_toLeftOf="@id/teamDesigner"
                         app:layout_constraintTop_toBottomOf="@id/teamDesigner"
@@ -325,9 +327,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamPositionDes"
                         android:text="Designer"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/priceText"
-                        android:textColor="@color/colorAccent"
+                       style="@style/DescriptionText"
                         app:layout_constraintRight_toRightOf="@+id/teamDesigner"
                         app:layout_constraintLeft_toLeftOf="@+id/teamDesigner"
                         app:layout_constraintTop_toBottomOf="@+id/desName"
@@ -349,8 +349,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/markName"
                         android:text="Mr. C"
-                        android:textSize="@dimen/titleText"
-                        android:textColor="@color/subTitleTextColor"
+                        style="@style/DateText"
                         app:layout_constraintRight_toRightOf="@id/teamMarketing"
                         app:layout_constraintLeft_toLeftOf="@id/teamMarketing"
                         app:layout_constraintTop_toBottomOf="@id/teamMarketing"
@@ -361,9 +360,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/teamPositionMark"
                         android:text="Marketing"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/priceText"
-                        android:textColor="@color/colorAccent"
+                        style="@style/DescriptionText"
                         app:layout_constraintRight_toRightOf="@+id/teamMarketing"
                         app:layout_constraintLeft_toLeftOf="@+id/teamMarketing"
                         app:layout_constraintTop_toBottomOf="@+id/markName"

@@ -1,45 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarSingle"
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_contact_us"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:navigationIcon="?attr/homeAsUpIndicator"
-            app:theme="@style/customToolbar"
-            app:title="@string/contactUs"
-            app:titleTextColor="@color/textColor" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <View
-            android:id="@+id/shadow_view_contact_us"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/squareTextViewForQuantity"
-            android:background="@drawable/toolbar_shadow"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_contact_us" />
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/backBtn"-->
+<!--                android:src="@drawable/ic_ham"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                />-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/singlePostTypeImage"
+                android:src="@drawable/ic_contact"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/singlePostTypeName"
+                android:text="@string/aboutUs"
+                style="@style/TitleText"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="@dimen/layout_margin_small"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
 
 
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways|snap" />
-    </com.google.android.material.appbar.AppBarLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_margin_small"
+        android:id="@+id/view"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSingle"
+        />
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -50,7 +75,7 @@
                 layout="@layout/layout_map"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="@dimen/layout_margin_medium"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include
@@ -84,7 +109,7 @@
     </ScrollView>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

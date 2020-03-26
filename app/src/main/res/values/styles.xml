@@ -73,7 +73,7 @@
     </style>
 
     <style name="DescriptionText" parent="android:style/Theme">
-        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">@dimen/priceText</item>
         <item name="android:fontFamily">@font/font_family</item>
         <item name="android:textStyle">italic</item>

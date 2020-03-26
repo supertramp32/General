@@ -20,20 +20,19 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/backBtn"
-                android:src="@drawable/ic_ham"
-                android:layout_gravity="center_vertical"
-                />
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/backBtn"-->
+<!--                android:src="@drawable/ic_ham"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                />-->
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginLeft="@dimen/layout_margin_medium"
                 android:id="@+id/singlePostTypeImage"
-                android:src="@drawable/gallery"
+                android:src="@drawable/ic_gallery_blue"
                 android:layout_gravity="center_vertical"
                 />
 
@@ -43,6 +42,7 @@
                 android:id="@+id/singlePostTypeName"
                 android:text="Gallery"
                 style="@style/TitleText"
+                android:textColor="@color/colorAccent"
                 android:layout_marginLeft="@dimen/layout_margin_small"
                 android:layout_gravity="center_vertical"
                 />
