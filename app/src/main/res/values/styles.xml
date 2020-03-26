@@ -50,7 +50,7 @@
 </style>
 
     <style name="customToolbar">
-        <item name="iconTint">@color/textColor</item>
+        <item name="iconTint">@color/colorAccent</item>
     </style>
 
 </resources>

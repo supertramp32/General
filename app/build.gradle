@@ -41,6 +41,9 @@ dependencies {
     //map
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
 
+    //circular image
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
 
 
 }

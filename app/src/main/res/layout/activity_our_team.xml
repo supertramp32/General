@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OurTeamActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:theme="@style/customToolbar"
+            app:title="@string/ourTeam"
+            app:titleTextColor="@color/colorAccent" />
+
+        <View
+            android:id="@+id/shadow_view_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/squareTextViewForQuantity"
+            android:background="@drawable/toolbar_shadow"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_contact_us" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/layout_margin_very_small"
+                android:layout_marginLeft="@dimen/layout_margin_very_small"
+                android:layout_marginTop="@dimen/layout_margin_very_small"
+                android:background="@color/colorCardBackground"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/layout_margin_very_small"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="@dimen/layout_margin_small"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamExecutives"
+                        android:text="EXECUTIVES:"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:id="@+id/viewO"
+                        android:background="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="@id/teamExecutives"
+                        app:layout_constraintLeft_toLeftOf="@id/teamExecutives"
+                        app:layout_constraintTop_toBottomOf="@id/teamExecutives"
+                        />
+
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/teamCeo"
+                        android:src="@drawable/da"
+                        android:layout_margin="@dimen/layout_margin_medium"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewO"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ceoName"
+                        android:text="Mr. X"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/teamCeo"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamPosition"
+                        android:text="CEO"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/priceText"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ceoName"
+                        />
+
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/teamCto"
+                        android:src="@drawable/daa"
+                        app:layout_constraintRight_toLeftOf="@id/teamCoo"
+                        android:layout_margin="@dimen/layout_margin_medium"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/teamPosition"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ctoName"
+                        android:text="Mr. Y"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintRight_toRightOf="@id/teamCto"
+                        app:layout_constraintLeft_toLeftOf="@id/teamCto"
+                        app:layout_constraintTop_toBottomOf="@id/teamCto"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamPositionCto"
+                        android:text="CTO"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/priceText"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="@id/teamCto"
+                        app:layout_constraintLeft_toLeftOf="@id/teamCto"
+                        app:layout_constraintTop_toBottomOf="@id/ctoName"
+                        />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/teamCoo"
+                        android:src="@drawable/daaa"
+                        app:layout_constraintLeft_toRightOf="@id/teamCto"
+                        android:layout_margin="@dimen/layout_margin_medium"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/teamPosition"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cooName"
+                        android:text="Mr. Z"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintRight_toRightOf="@id/teamCoo"
+                        app:layout_constraintLeft_toLeftOf="@id/teamCoo"
+                        app:layout_constraintTop_toBottomOf="@id/teamCoo"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamPositionCoo"
+                        android:text="COO"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/priceText"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="@+id/teamCoo"
+                        app:layout_constraintLeft_toLeftOf="@+id/teamCoo"
+                        app:layout_constraintTop_toBottomOf="@+id/cooName"
+                        />
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/layout_margin_very_small"
+                android:layout_marginLeft="@dimen/layout_margin_very_small"
+                android:background="@color/colorCardBackground"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/layout_margin_very_small"
+                app:cardUseCompatPadding="true"
+                android:layout_marginBottom="@dimen/layout_margin_small"
+                app:contentPadding="@dimen/layout_margin_small"
+                app:layout_constraintTop_toBottomOf="@id/card1"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamTaskForce"
+                        android:text="TASK FORCE:"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:id="@+id/viewOn"
+                        android:background="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="@id/teamTaskForce"
+                        app:layout_constraintLeft_toLeftOf="@id/teamTaskForce"
+                        app:layout_constraintTop_toBottomOf="@id/teamTaskForce"
+                        />
+
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/teamDeveloper"
+                        android:src="@drawable/daa"
+                        android:layout_margin="@dimen/layout_margin_medium"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/teamPositionDes"
+                        app:layout_constraintTop_toBottomOf="@id/viewOn"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/devName"
+                        android:text="Mr. A"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintRight_toRightOf="@id/teamDeveloper"
+                        app:layout_constraintLeft_toLeftOf="@id/teamDeveloper"
+                        app:layout_constraintTop_toBottomOf="@id/teamDeveloper"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamPositionDev"
+                        android:text="Developer"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/priceText"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="@+id/teamDeveloper"
+                        app:layout_constraintLeft_toLeftOf="@id/teamDeveloper"
+                        app:layout_constraintTop_toBottomOf="@id/devName"
+                        />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/teamDesigner"
+                        android:src="@drawable/daaa"
+                        android:layout_margin="@dimen/layout_margin_medium"
+                        app:layout_constraintRight_toLeftOf="@id/teamMarketing"
+                        app:layout_constraintLeft_toRightOf="@id/teamPositionDev"
+                        app:layout_constraintTop_toBottomOf="@id/viewOn"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/desName"
+                        android:text="Mr. B"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintRight_toRightOf="@id/teamDesigner"
+                        app:layout_constraintLeft_toLeftOf="@id/teamDesigner"
+                        app:layout_constraintTop_toBottomOf="@id/teamDesigner"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamPositionDes"
+                        android:text="Designer"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/priceText"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="@+id/teamDesigner"
+                        app:layout_constraintLeft_toLeftOf="@+id/teamDesigner"
+                        app:layout_constraintTop_toBottomOf="@+id/desName"
+                        />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/teamMarketing"
+                        android:src="@drawable/daaa"
+                        app:layout_constraintLeft_toRightOf="@id/teamPositionDes"
+                        android:layout_margin="@dimen/layout_margin_medium"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewOn"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/markName"
+                        android:text="Mr. C"
+                        android:textSize="@dimen/titleText"
+                        android:textColor="@color/subTitleTextColor"
+                        app:layout_constraintRight_toRightOf="@id/teamMarketing"
+                        app:layout_constraintLeft_toLeftOf="@id/teamMarketing"
+                        app:layout_constraintTop_toBottomOf="@id/teamMarketing"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/teamPositionMark"
+                        android:text="Marketing"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/priceText"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintRight_toRightOf="@+id/teamMarketing"
+                        app:layout_constraintLeft_toLeftOf="@+id/teamMarketing"
+                        app:layout_constraintTop_toBottomOf="@+id/markName"
+                        />
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
