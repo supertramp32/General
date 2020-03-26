@@ -13,6 +13,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.bigfoot.general.gallery.GalleryModel;
+import com.bigfoot.general.gallery.GalleryViewActivity;
 import com.bigfoot.general.utils.SlideShowAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -132,6 +134,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        vProducts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, GalleryViewActivity.class));
+
+            }
+        });
 
     }
 

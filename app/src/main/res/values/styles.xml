@@ -53,4 +53,40 @@
         <item name="iconTint">@color/colorAccent</item>
     </style>
 
+
+    <style name="TitleText" parent="android:style/Theme">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/titleText</item>
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAllCaps">true</item>
+
+    </style>
+
+
+    <style name="DateText" parent="android:style/Theme">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/priceText</item>
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="DescriptionText" parent="android:style/Theme">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/priceText</item>
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:textStyle">italic</item>
+
+    </style>
+
+
+    <style name="SettingsSubTitle" parent="android:style/Theme">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/titleText</item>
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
 </resources>
